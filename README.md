@@ -32,7 +32,7 @@ The above code will work perfectly when you run your application in a browser, b
 You guessed it, we use `Renderer2`!
 
 Here's a naive example of listening to changes on an element.
-```
+```typescript
 ngAfterViewInit() {
   this.touchmoveListener = this.renderer.listen('body', 'touchmove', (event) => {
     // do stuff
