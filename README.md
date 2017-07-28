@@ -11,16 +11,15 @@ As you may know, Angular2+ was designed to be decoupled from the dom. This leads
 You might be familiar with the `ViewChild` decorator, and how to use it to interact with native elements like a button or input.
 
 example
-```
-import { Component } from '@angular/core';
-import { ViewChild } from "@angular/core/src/metadata/di";
+```typescript
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'dope-app',
-  templateUrl: '<input type="text" #input>'
+  template: '<input type="text" #input>'
 })
 export class AppComponent {
-  @ViewChild("input") input;
+  @ViewChild('input') input;
 
   ngAfterContentInit() {
     this.input.nativeElement.focus();
